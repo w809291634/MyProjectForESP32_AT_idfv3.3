@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Python: 当前文件",
+      "type": "python",
+      "request": "launch",
+      "program": "C:/8266/MyProjectForESP_AT/esp-idf/tools/idf.py",
+      "console": "integratedTerminal",
+      "args": ["--help"]
+    }
+  ]
+}

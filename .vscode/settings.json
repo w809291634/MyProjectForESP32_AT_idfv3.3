@@ -1,0 +1,64 @@
+// {
+//     "editor.tabSize": 2,
+//     "workbench.colorTheme": "Default Dark+",
+//     "workbench.iconTheme": "vscode-icons",
+//     //项目所在路径
+//     // "PROJECT_PATH": "C:/8266/MyProjectForESP32_AT_v4.2.2-76-gefa6eca8b8/my_examples/my_app_main",
+//     "PROJECT_PATH": "C:/8266/MyProjectForESP32_AT_v4.2.2-76-gefa6eca8b8",
+//     // "IDF_PYTHON_ENV_PATH": "C:/Python38-32",
+//     "COM_NUM": "COM10",
+//     "com": "{$env:path}",
+//     "terminal.integrated.env.windows": {
+//         "IDF_PATH": "C:/8266/MyProjectForESP32_AT_v4.2.2-76-gefa6eca8b8/esp-idf",
+//         "IDF_PYTHON_ENV_PATH": "C:/Espressif/python_env/idf4.2_py3.8_env",
+//         "path": "${env:path};C:/Espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin",
+//         // "PYTHONPATH":"${workspaceFolder};${env:PYTHONPATH}"
+//         // "${workspaceFolder};${env:PYTHONPATH}"
+//     },
+//     "files.associations": {
+//         "gpio.h": "c",
+//         "freertos.h": "c",
+//         "hello_world_user.h": "c",
+//         "gpio_user.h": "c"
+//     }
+// }
+
+{
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vscode-icons",
+    //项目所在路径
+    "PROJECT_PATH": "D:/esp-at",
+    "FLASH_COM_NUM": "COM9",
+    "FLASH_COM_BAUD": "921600",
+    "MONITOR_COM_NUM": "COM9",
+    "MONITOR_COM_BAUD": "115200",
+    // "terminal.explorerKind": "external",
+    // "terminal.external.windowsExec": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps\\winget.exe",
+    // 相关路径
+    "xtensa": "D:/Espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin",
+    "cmake": "D:/Espressif/tools/cmake/3.16.4/bin",
+    "ninja": "D:/Espressif/tools/ninja/1.10.0",
+    "python": "D:/Espressif/python_env/idf4.2_py3.8_env/Scripts",
+    "mintty" : "D:\\Program_Files\\AiThinkerIDE_V1.5.2\\msys32\\usr\\bin",
+    // "xtensa": "D:/Espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin",
+    // "xtensa": "D:/Espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/bin",
+    "terminal.integrated.env.windows": {
+        "IDF_PATH": "D:/esp-at/esp-idf",
+        "IDF_PYTHON_ENV_PATH": "D:/Espressif/python_env/idf4.2_py3.8_env",
+        "path": "${env:path};${config:xtensa};${config:cmake};${config:ninja};${config:python}",
+    },
+    "terminal.external.env.windows": {
+        "IDF_PATH": "D:/MyProjectForESP32_AT_v4.2.2-76-gefa6eca8b8/esp-idf",
+        "IDF_PYTHON_ENV_PATH": "D:/Espressif/python_env/idf4.2_py3.8_env",
+        "path": "${config:xtensa};${config:cmake};${config:ninja};${config:python};${config:mintty};${env:path}",
+    },
+    "files.associations": {
+        "gpio.h": "c",
+        "freertos.h": "c",
+        "hello_world_user.h": "c",
+        "gpio_user.h": "c"
+    },
+    "idf.adapterTargetName": "esp32",
+    // "idf.adapterTargetName": "esp32"
+}

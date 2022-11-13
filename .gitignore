@@ -1,6 +1,37 @@
-include/config
-include/sdkconfig.h
+
+examples/**/sdkconfig
+examples/**/sdkconfig.old
+examples/**/build
+examples/**/**/sdkconfig
+examples/**/**/sdkconfig.old
+examples/**/**/build
+
+# Example project files
+esp-idf/examples/**/sdkconfig
+esp-idf/examples/**/sdkconfig.old
+esp-idf/examples/**/build
+
+esp-idf/examples/**/**/sdkconfig
+esp-idf/examples/**/**/sdkconfig.old
+esp-idf/examples/**/**/build
+
 build/
-sdkconfig.old
-sdkconfig
+
+
 .DS_Store
+
+*.pyc
+
+# Doc build artifacts
+docs/*/_build/
+docs/*/doxygen-warning-log.txt
+docs/*/sphinx-warning-log.txt
+docs/*/sphinx-warning-log-sanitized.txt
+docs/*/xml/
+docs/*/xml_in/
+docs/*/man/
+docs/doxygen_sqlite3.db
+
+# Downloaded font files
+docs/_static/DejaVuSans.ttf
+docs/_static/NotoSansSC-Regular.otf

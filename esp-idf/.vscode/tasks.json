@@ -1,0 +1,278 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    //cmake使用版本
+    {
+      "type": "shell",
+      "label": "idf.py build",
+      "command": "python  ${config:IDF_PATH}/tools/idf.py build ",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py rebuild",
+      "command": "python  ${config:IDF_PATH}/tools/idf.py build ",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build",
+      "dependsOn": [
+        "idf.py clean"
+      ]
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py clean",
+      "command": "python ${config:IDF_PATH}/tools/idf.py clean",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py fullclean",
+      "command": "python ${config:IDF_PATH}/tools/idf.py fullclean",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py menuconfig ",
+      "command": "mintty.exe -h always -e python ${config:IDF_PATH}/tools/idf.py menuconfig ",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py reconfigure",
+      "command": "python ${config:IDF_PATH}/tools/idf.py reconfigure",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py help",
+      "command": "python ${config:IDF_PATH}/tools/idf.py --help",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py flash",
+      "command": "python ${config:IDF_PATH}/tools/idf.py flash -p ${config:FLASH_COM_NUM} -b ${config:FLASH_COM_BAUD}",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py build flash",
+      "command": "python ${config:IDF_PATH}/tools/idf.py build flash -p ${config:FLASH_COM_NUM} -b ${config:FLASH_COM_BAUD}",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py build flash monitor",
+      "command": "mintty.exe -h always -e python ${config:IDF_PATH}/tools/idf.py build flash -p ${config:FLASH_COM_NUM} -b ${config:FLASH_COM_BAUD} monitor -p ${config:MONITOR_COM_NUM}",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py build flash monitor",
+      "command": "mintty.exe -h always -e python ${config:IDF_PATH}/tools/idf.py build flash -p ${config:FLASH_COM_NUM} -b ${config:FLASH_COM_BAUD} monitor -p ${config:MONITOR_COM_NUM}",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    // 使用putty终端启动串口监视，这样能够兼容console组件
+    {
+      "type": "shell",
+      "label": "idf.py build flash putty",
+      "command": "putty -serial ${config:MONITOR_COM_NUM} -sercfg ${config:MONITOR_COM_BAUD},8,n,1,N",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build",
+      "dependsOn": [
+        "idf.py build flash"
+      ]
+    }
+    , 
+    // 使用putty终端启动串口监视，这样能够兼容console组件
+    {
+      "type": "shell",
+      "label": "putty",
+      "command": "putty -serial ${config:MONITOR_COM_NUM} -sercfg ${config:MONITOR_COM_BAUD},8,n,1,N",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build",
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py monitor",
+      "command": "python ${config:IDF_PATH}/tools/idf.py monitor -p ${config:MONITOR_COM_NUM}",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py size-components",
+      "command": "python ${config:IDF_PATH}/tools/idf.py size-components",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+    ,
+    {
+      "type": "shell",
+      "label": "idf.py flash monitor",
+      "command": "python ${config:IDF_PATH}/tools/idf.py flash  -p ${config:FLASH_COM_NUM} -b ${config:FLASH_COM_BAUD} monitor -p ${config:MONITOR_COM_NUM}",
+      "args": [],
+      "options": {
+        "cwd": "${config:PROJECT_PATH}"
+      },
+      "group": "build"
+    }
+
+    //make使用版本
+    // {
+    //   "type": "shell",
+    //   "label": "echo value",
+    //   "command": "echo ${config:PROJECT_PATH}",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${workspaceFolder}"
+    //   }
+    // },
+    // {
+    //   "type": "shell",
+    //   "label": "make menuconfig",
+    //   "command": "mintty.exe -h always -e make menuconfig -j8",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   }
+    // },
+    // {
+    //   "type": "shell",
+    //   "label": "make",
+    //   "command": "make all -j8",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   },
+    //   "group": "build",
+    //   "problemMatcher": []
+    // },
+    // {
+    //   "type": "shell",
+    //   "label": "remake",
+    //   "command": "make all -j8",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   },
+    //   "group": "build",
+    //   "dependsOn": [
+    //     "make clean"
+    //   ]
+    // },
+    // {
+    //   "type": "shell",
+    //   "label": "make flash",
+    //   "command": "make flash ESPPORT=${config:COM_NUM} -j8",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   },
+    //   "group": "build"
+    // },
+    // {
+    //   "type": "shell",
+    //   "label": "make erase_flash",
+    //   "command": "make erase_flash ESPPORT=${config:COM_NUM}",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   },
+    //   "group": "build"
+    // },
+    // {
+    //   "type": "shell",
+    //   "label": "make clean",
+    //   "command": "make clean",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   },
+    //   "group": "build"
+    // }
+    // ,
+    // {
+    //   "type": "shell",
+    //   "label": "make monitor",
+    //   "command": "make monitor ESPPORT=${config:COM_NUM}  MONITORBAUD=115200  -j8",
+    //   "args": [],
+    //   "options": {
+    //     "cwd": "${config:PROJECT_PATH}"
+    //   },
+    //   "group": "build"
+    // }
+    // ,
+  
+
+  ]
+}
+

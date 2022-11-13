@@ -1,0 +1,82 @@
+// {
+//     "editor.tabSize": 2,
+//     "workbench.colorTheme": "Default Dark+",
+//     "workbench.iconTheme": "vscode-icons",
+//     //  项目所在路径：公司路径
+//     "PROJECT_PATH": "C:/8266/MyProjectForESP8266_AT/esp-idf/my_examples/my_app_main",
+//     // "PROJECT_PATH": "C:/8266/MyProjectForESP8266_AT/esp-idf/examples/wifi/getting_started/softAP",
+//     // "PROJECT_PATH": "C:/8266/MyProjectForESP8266_AT/esp-idf/examples/system/console",
+//     // "PROJECT_PATH": "C:/8266/MyProjectForESP8266_AT/esp-idf/examples/system/ota/simple_ota_example",        //OTA
+//     // "PROJECT_PATH": "C:/8266/MyProjectForESP8266_AT/esp-idf/examples/get-started/hello_world",
+
+//     "IDF_PATH": "C:/8266/MyProjectForESP8266_AT/esp-idf",
+//     //IDF_PATH环境变量
+//     "FLASH_COM_NUM": "COM5",
+//     // "FLASH_COM_BAUD": "460800",
+//     "FLASH_COM_BAUD": "921600",
+//     "MONITOR_COM_NUM": "COM5",
+//     "MONITOR_COM_BAUD": "115200",
+//     "terminal.integrated.env.windows": {
+//         "IDF_PATH": "${config:IDF_PATH}",
+//     },
+//     "terminal.integrated.env.linux": {
+        
+//     },
+//     "files.associations": {
+//         "gpio.h": "c",
+//         "freertos.h": "c",
+//         "hello_world_user.h": "c",
+//         "gpio_user.h": "c",
+//         "esp_system.h": "c",
+//         "esp_console.h": "c",
+//         "console_app.h": "c",
+//         "cmd_system.h": "c",
+//         "cmd_wifi_app.h": "c",
+//         "argtable3.h": "c",
+//         "event_groups.h": "c",
+//         "stdio.h": "c"
+//     },
+//     "python.pythonPath": "C:\\8266\\AiThinkerIDE_V1.5.2\\msys32\\mingw32\\bin\\python.exe"
+// }
+
+{
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vscode-icons",
+    // 项目所在路径
+    // "PROJECT_PATH": "D:/MyProjectForESP32_MESH_release1.0_idf3.3.5/esp-idf/my_examples/my_app_main",
+    // "PROJECT_PATH": "D:/MyProjectForESP32_MESH_release1.0_idf3.3.5/esp-idf/examples/system/console",
+    "PROJECT_PATH": "D:/MyProjectForESP32_MESH_release1.0_idf3.3.5/esp-idf/examples/get-started/hello_world",
+    // "PROJECT_PATH": "D:/MyProjectForESP32_MESH_release1.0_idf3.3.5/esp-idf/examples/system/ota/native_ota/2+MB_flash/new_to_new_with_old",
+    // "PROJECT_PATH": "D:/MyProjectForESP32_MESH_release1.0_idf3.3.5/esp-idf/examples/system/ota/simple_ota_example",
+    "IDF_PATH": "D:/MyProjectForESP32_MESH_release1.0_idf3.3.5/esp-idf",
+    "FLASH_COM_NUM": "COM9",
+    "FLASH_COM_BAUD": "921600",
+    "MONITOR_COM_NUM": "COM9",
+    "MONITOR_COM_BAUD": "115200",
+    "terminal.integrated.env.windows": {
+        //IDF_PATH环境变量
+        "IDF_PATH": "${config:IDF_PATH}"
+    },
+    "terminal.integrated.env.linux": {
+        
+    },
+    "files.associations": {
+        "gpio.h": "c",
+        "freertos.h": "c",
+        "hello_world_user.h": "c",
+        "gpio_user.h": "c",
+        "esp_spi_flash.h": "c",
+        "stdio.h": "c",
+        "string.h": "c",
+        "cmd_decl.h": "c",
+        "esp_err.h": "c",
+        "cmd_system.h": "c",
+        "sdkconfig.h": "c",
+        "console_app.h": "c",
+        "cmd_wifi_ap.h": "c",
+        "cmd_wifi.h": "c",
+        "cmd_wifi_station.h": "c"
+    },
+    "python.pythonPath": "C:\\8266\\AiThinkerIDE_V1.5.2\\msys32\\mingw32\\bin\\python.exe"
+}
